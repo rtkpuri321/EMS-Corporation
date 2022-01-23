@@ -200,44 +200,44 @@ INSERT INTO `salary` (`id`, `base`, `bonus`, `total`) VALUES
 (111, 45000, 8, 48600);
 
 --
--- Indexes for dumped tables
+-- for dumped tables
 --
 
 --
--- Indexes for table `alogin`
+-- for table `alogin`
 --
 ALTER TABLE `alogin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `employee`
+--for table `employee`
 --
 ALTER TABLE `employee`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indexes for table `employee_leave`
+--for table `employee_leave`
 --
 ALTER TABLE `employee_leave`
   ADD PRIMARY KEY (`token`),
   ADD KEY `employee_leave_ibfk_1` (`id`);
 
 --
--- Indexes for table `project`
+-- for table `project`
 --
 ALTER TABLE `project`
   ADD PRIMARY KEY (`pid`),
   ADD KEY `project_ibfk_1` (`eid`);
 
 --
--- Indexes for table `rank`
+-- for table `rank`
 --
 ALTER TABLE `rank`
   ADD PRIMARY KEY (`eid`);
 
 --
--- Indexes for table `salary`
+--  for table `salary`
 --
 ALTER TABLE `salary`
   ADD PRIMARY KEY (`id`);
