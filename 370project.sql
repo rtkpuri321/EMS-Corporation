@@ -34,7 +34,7 @@ CREATE TABLE `employee` (
   `dept` varchar(100) NOT NULL,
   `degree` varchar(100) NOT NULL,
   `pic` text NOT NULL
-) 
+);
 
 
 
@@ -63,7 +63,7 @@ CREATE TABLE `employee_leave` (
   `end` date DEFAULT NULL,
   `reason` char(100) DEFAULT NULL,
   `status` char(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+); 
 
 --
 -- Dumping data for table `employee_leave`
@@ -91,7 +91,7 @@ CREATE TABLE `project` (
   `subdate` date DEFAULT '0000-00-00',
   `mark` int(11) NOT NULL,
   `status` varchar(50) DEFAULT NULL
-) 
+); 
 
 --
 -- Dumping data for table `project`
@@ -120,7 +120,7 @@ INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `sta
 CREATE TABLE `rank` (
   `eid` int(11) NOT NULL,
   `points` int(11) DEFAULT '0'
-) 
+); 
 
 --
 -- Dumping data for table `rank`
@@ -150,7 +150,7 @@ CREATE TABLE `salary` (
   `base` int(11) NOT NULL,
   `bonus` int(11) DEFAULT NULL,
   `total` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 --
 -- Dumping data for table `salary`
