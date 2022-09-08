@@ -1,7 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.8.4
+-- phpMyAdmin SQL
 -- https://www.phpmyadmin.net/
---
 -- Host: 127.0.0.1
 
 
@@ -11,17 +9,6 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `370project`
---
-
--- --------------------------------------------------------
-
 --
 -- Table structure for table `alogin`
 --
@@ -30,16 +17,11 @@ CREATE TABLE `alogin` (
   `id` int(11) NOT NULL,
   `email` tinytext NOT NULL,
   `password` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `alogin`
---
+) ;
 
 INSERT INTO `alogin` (`id`, `email`, `password`) VALUES
 (1, 'admin', 'admin');
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `employee`
@@ -61,9 +43,7 @@ CREATE TABLE `employee` (
   `pic` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `employee`
---
+
 
 INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `birthday`, `gender`, `contact`, `nid`, `address`, `dept`, `degree`, `pic`) VALUES
 (101, 'Mehadi', 'Hassan', 'mehadi@xyz.corp', '1234', '1994-04-04', 'Male', '01919', 12121, 'Razarbagh', 'IT', 'Head', 'images/no.jpg'),
@@ -78,7 +58,6 @@ INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `bir
 (110, 'Christopher ', 'Manning', 'christopher@xyz.corp', '1234', '1965-09-18', 'Male', '147147', 741741, 'USA', 'NLP', 'PhD', 'images/download (1).jpeg'),
 (111, 'Jon', 'Snow', 'john@xyz.corp', '1234', '2011-02-01', 'Male', '0187282', 112233, 'Winterfell', 'Management', 'BSc.', 'images/jon-snow.jpg');
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `employee_leave`
@@ -106,7 +85,6 @@ INSERT INTO `employee_leave` (`id`, `token`, `start`, `end`, `reason`, `status`)
 (111, 309, '2019-04-09', '2019-04-13', 'Visit to Kings Landing', 'Pending'),
 (104, 310, '2019-04-08', '2019-04-09', 'Emergency Leave', 'Pending');
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `project`
@@ -141,7 +119,6 @@ INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `sta
 (224, 107, 'Security Check', '2019-04-26', '2019-04-05', 9, 'Submitted'),
 (225, 109, 'ML', '2019-04-03', '2019-04-04', 6, 'Submitted');
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `rank`
@@ -299,6 +276,3 @@ ALTER TABLE `salary`
   ADD CONSTRAINT `salary_ibfk_1` FOREIGN KEY (`id`) REFERENCES `employee` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
