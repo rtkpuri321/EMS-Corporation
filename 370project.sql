@@ -34,7 +34,7 @@ CREATE TABLE `employee` (
   `dept` varchar(100) NOT NULL,
   `degree` varchar(100) NOT NULL,
   `pic` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) 
 
 
 
@@ -91,7 +91,7 @@ CREATE TABLE `project` (
   `subdate` date DEFAULT '0000-00-00',
   `mark` int(11) NOT NULL,
   `status` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) 
 
 --
 -- Dumping data for table `project`
@@ -120,7 +120,7 @@ INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `sta
 CREATE TABLE `rank` (
   `eid` int(11) NOT NULL,
   `points` int(11) DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) 
 
 --
 -- Dumping data for table `rank`
